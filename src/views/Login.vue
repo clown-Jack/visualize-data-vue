@@ -58,15 +58,13 @@
 
 <script>
 import { UserOutlined, UnlockOutlined } from "@ant-design/icons-vue";
-import bgAnimation from "@/components/bgAnimation/index.vue";
 import { reactive, toRefs, computed } from "vue";
 import router from "@/router";
 import {message} from 'ant-design-vue';
 export default {
   components: {
     UserOutlined,
-    UnlockOutlined,
-    bgAnimation
+    UnlockOutlined
   },
   setup() {
     const state = reactive({

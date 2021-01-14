@@ -7,7 +7,9 @@
   </ul>
 </template>
 <script>
-export default {};
+export default {
+  name:'bgAnimation'
+};
 </script>
 <style lang="stylus" scoped>
 .bg-container

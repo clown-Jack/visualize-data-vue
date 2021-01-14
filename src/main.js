@@ -2,7 +2,8 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import vueParticles from 'vue-particles'
+import customCom from './components';
+import vueParticles from 'vue-particles';
 
 import Antd from "ant-design-vue";
 import "ant-design-vue/dist/antd.css";
@@ -16,6 +17,9 @@ message.config({
 const app = createApp(App);
 app.use(store);
 app.use(router);
+//全局注册组件
+app.use(customCom);
+
 app.use(Antd);
 app.use(vueParticles);
 app.mount("#app");
