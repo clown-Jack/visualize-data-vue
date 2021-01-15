@@ -8,7 +8,7 @@
 </template>
 <script>
 export default {
-  name:'bgAnimation'
+  name: "bgAnimation"
 };
 </script>
 <style lang="stylus" scoped>
@@ -27,7 +27,7 @@ export default {
     height 100%
     z-index 0
     animation imgAnimation 48s linear infinite 0s
-    background-repeat none 
+    background-repeat none
     background-size cover
     background-position 50% 50%
     &:nth-child(1) {

@@ -2,7 +2,8 @@
   <div class="home-page">
     <div class="home-wrap" ref="homeWrap">
       <div class="home-top"></div>
-      <sinan/>
+      <sinan />
+      <sealrolls />
     </div>
   </div>
 </template>

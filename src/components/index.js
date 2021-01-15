@@ -1,14 +1,16 @@
 import bgAnimation from "./bgAnimation";
-import sinan from './sinan'
+import sinan from "./sinan";
+import sealrolls from "./sealrolls";
+
 const components = {
   bgAnimation,
-  sinan
+  sinan,
+  sealrolls
 };
 
-const install = (Vue={}) => {
-    console.log(Vue);
+const install = (Vue = {}) => {
   Object.keys(components).forEach(component => {
-    Vue.component(components[component].name,components[component])
+    Vue.component(components[component].name, components[component]);
   });
 };
 

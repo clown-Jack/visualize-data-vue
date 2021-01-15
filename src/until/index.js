@@ -11,5 +11,5 @@ export function screenSize(el) {
     let yScale = srceenHeight / defheight;
     el.style.cssText += `;transform: scale(${xScale},${yScale})`;
   }
-  window.addEventListener('resize',screen,false);
+  window.addEventListener("resize", screen, false);
 }

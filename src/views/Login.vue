@@ -60,7 +60,7 @@
 import { UserOutlined, UnlockOutlined } from "@ant-design/icons-vue";
 import { reactive, toRefs, computed } from "vue";
 import router from "@/router";
-import {message} from 'ant-design-vue';
+import { message } from "ant-design-vue";
 export default {
   components: {
     UserOutlined,
@@ -72,11 +72,11 @@ export default {
       password: "123456"
     });
     const handlerClick = () => {
-      const { push } =router;
+      const { push } = router;
       if (state.username == "admin" && state.password == "123456") {
         push("/home");
       } else {
-        message.error("请输入正确的用户名和密码")
+        message.error("请输入正确的用户名和密码");
       }
     };
     const isDisabled = computed(() => {
