@@ -3,7 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import customCom from "./components";
-import vueSeamlessScroll from "vue-seamless-scroll";
+// import vueSeamlessScroll from "vue-seamless-scroll";
 import vueParticles from "vue-particles";
 
 import Antd from "ant-design-vue";
@@ -20,7 +20,7 @@ app.use(store);
 app.use(router);
 //全局注册组件
 app.use(customCom);
-app.use(vueSeamlessScroll);
+// app.use(vueSeamlessScroll);
 app.use(Antd);
 app.use(vueParticles);
 app.mount("#app");

@@ -4,6 +4,7 @@
       <div class="home-top"></div>
       <sinan />
       <sealrolls />
+      <pyramid />
     </div>
   </div>
 </template>
