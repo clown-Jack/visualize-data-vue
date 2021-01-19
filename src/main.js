@@ -5,7 +5,8 @@ import store from "./store";
 import customCom from "./components";
 // import vueSeamlessScroll from "vue-seamless-scroll";
 import vueParticles from "vue-particles";
-
+import * as Echarts from "echarts";
+console.log(Echarts);
 import Antd from "ant-design-vue";
 import "ant-design-vue/dist/antd.css";
 
@@ -24,3 +25,5 @@ app.use(customCom);
 app.use(Antd);
 app.use(vueParticles);
 app.mount("#app");
+
+app.config.globalProperties.$echarts = Echarts;
