@@ -50,19 +50,14 @@
           </div>
         </div>
       </div>
-      <div class="arrow_contain" :class="`arrow_contain${index+1}`">
+      <div class="arrow_contain" :class="`arrow_contain${index + 1}`">
         <span class="arrow" :class="`arrow_${index + 1}`"></span>
       </div>
     </div>
   </div>
 </template>
 <script>
-import {
-  onMounted,
-  reactive,
-  toRefs,
-  getCurrentInstance
-} from "vue";
+import { onMounted, reactive, toRefs, getCurrentInstance } from "vue";
 export default {
   name: "pyramid",
   setup() {
@@ -86,14 +81,14 @@ export default {
           number: 66
         }
       ],
-      numList:[],
-      color:['#45fed4', '#84a9ef', '#f1e04f', '#dbfe73']
+      numList: [],
+      color: ["#45fed4", "#84a9ef", "#f1e04f", "#dbfe73"]
     });
 
-    let initEchart = (dom,data) => {
+    let initEchart = (dom, data) => {
       let chart = ctx.$echarts.init(document.getElementById(dom));
-      let num = (data.number/sum()*100).toFixed(1);
-      console.log(num)
+      let num = ((data.number / sum()) * 100).toFixed(1);
+      console.log(num);
       let option = {
         color: [data.color, "#333"],
         series: [
@@ -128,7 +123,7 @@ export default {
                 }
               },
               {
-                value: (100-num),
+                value: 100 - num,
                 name: "",
                 label: {
                   normal: {
@@ -141,19 +136,21 @@ export default {
         ]
       };
       chart.setOption(option, true);
+      window.addEventListener("resize", () => {
+        chart.resize();
+      });
     };
 
-    let sum = ()=>{
-      return state.numList.reduce((pre,next)=>pre+next)
-    }
+    let sum = () => {
+      return state.numList.reduce((pre, next) => pre + next);
+    };
     onMounted(() => {
-      
-      state.arrData.forEach((data,index)=>{
+      state.arrData.forEach((data, index) => {
         data.color = state.color[index];
         state.numList.push(data.number);
-      })
+      });
       state.arrData.forEach((data, index) => {
-        initEchart(`charts${index+1}`,data);
+        initEchart(`charts${index + 1}`, data);
       });
     });
     return {

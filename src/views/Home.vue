@@ -5,6 +5,9 @@
       <sinan />
       <sealrolls />
       <pyramid />
+      <rollarc />
+      <biaxialBar />
+      <circularBubble />
     </div>
   </div>
 </template>
